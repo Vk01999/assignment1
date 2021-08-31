@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee Table</title>
+<link rel="stylesheet" href="ass1.css">
+</head>
+<body>
+
+<h1>Employee Table</h1>
+
+
+<table id="dt">
+<caption>Employee Details</caption>
+<tr><button onclick = "myFunc('dt')">Add Row</button>
+  <tr>
+    <th>Emp name</th>
+    <th>Contact</th>
+	<th>Age</th>
+  </tr>
+  <tr>
+    <td>Alfred</td>
+    <td>821657</td>
+	<td>20</td>
+  </tr>
+  <tr>
+    <td>Mehen Singh</td>
+    <td>890654</td>
+	<td>20</td>
+  </tr>
+</table>
+<script>
+	function myFunc(tableID){
+	alert("Do you really want to add a row?");
+	var table = document.getElementById(tableID);  
+    var rowCount = table.rows.length;  
+    var row = table.insertRow(rowCount);  
+    //Column 1  
+    var cell1 = row.insertCell(0);  
+    var element1 = document.createElement("input");  
+    element1.type = "text";  
+    var btnName = "text" + (rowCount);  
+    element1.name = btnName;  
+    element1.value = " ";  
+    cell1.appendChild(element1);  
+    //Column 2  
+    var cell2 = row.insertCell(1); 
+	var element2= document.createElement("input");
+    element2.type="text";
+	cell2.appendChild(element2);
+    //Column 3  
+    var cell3 = row.insertCell(2);  
+    var element3 = document.createElement("input");  
+    element3.type = "text";  
+    cell3.appendChild(element3);  
+	}  
+	
+</script>
+</body>
+</html>
